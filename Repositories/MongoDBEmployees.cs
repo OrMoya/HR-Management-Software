@@ -1,4 +1,5 @@
 using HR_Management_Software.Models;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace HR_Management_Software.Repositories
@@ -20,17 +21,17 @@ namespace HR_Management_Software.Repositories
 
         void IEmployeeRepository.DeleteEmloyee(Guid id)
         {
-            throw new NotImplementedException();
+            employeeCollection.DeleteOne(employee => employee.Id == id);
         }
 
         Employee IEmployeeRepository.GetEmployee(Guid id)
         {
-            throw new NotImplementedException();
+            return employeeCollection.Find(employee => employee.Id == id).FirstOrDefault();
         }
 
         IEnumerable<Employee> IEmployeeRepository.GetEmployees()
         {
-            throw new NotImplementedException();
+            return employeeCollection.Find(new BsonDocument()).ToList();
         }
 
         void IEmployeeRepository.UpdateEmployee(Employee employee)

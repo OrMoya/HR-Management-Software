@@ -16,6 +16,19 @@ namespace HR_Management_Software.Controllers
             this.repository = repository;
         }
 
+        [HttpGet]
+        public ActionResult<List<EmployeeDto>> GetEmployees()
+        {
+            var employees = new List<EmployeeDto>();
+
+            foreach(var e in repository.GetEmployees())
+            {
+                employees.Add(e.asDto());
+            }
+
+            return employees;
+        }
+
         [HttpGet("{id}")]
         public ActionResult<EmployeeDto> GetEmployee(Guid id)
         {
@@ -42,6 +55,13 @@ namespace HR_Management_Software.Controllers
             repository.CreateEmployee(employee);
 
             return CreatedAtAction(nameof(GetEmployee), new {id = employee.Id}, employee.asDto());
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult<EmployeeDto> DeleteEmployee(Guid id)
+        {
+            repository.DeleteEmloyee(id);
+            return NoContent();
         }
     }
 }
