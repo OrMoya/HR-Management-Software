@@ -36,7 +36,7 @@ namespace HR_Management_Software.Repositories
 
         void IEmployeeRepository.UpdateEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            employeeCollection.FindOneAndReplace(existingEmployee => existingEmployee.Id == employee.Id,employee);
         }
     }
 

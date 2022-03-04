@@ -586,26 +586,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Orlan\\.nuget\\packages\\": {}
+    "C:\\Users\\oetemp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Orlan\\github\\HR-Management-Software\\HR-Management-Software.csproj",
+      "projectUniqueName": "E:\\Documents\\Repository\\HR-Management-Software\\HR-Management-Software.csproj",
       "projectName": "HR-Management-Software",
-      "projectPath": "C:\\Users\\Orlan\\github\\HR-Management-Software\\HR-Management-Software.csproj",
-      "packagesPath": "C:\\Users\\Orlan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Orlan\\github\\HR-Management-Software\\obj\\",
+      "projectPath": "E:\\Documents\\Repository\\HR-Management-Software\\HR-Management-Software.csproj",
+      "packagesPath": "C:\\Users\\oetemp\\.nuget\\packages\\",
+      "outputPath": "E:\\Documents\\Repository\\HR-Management-Software\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Orlan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\oetemp\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -651,7 +649,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\oetemp\\AppData\\Local\\Microsoft\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

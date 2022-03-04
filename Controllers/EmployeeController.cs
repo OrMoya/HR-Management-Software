@@ -63,5 +63,24 @@ namespace HR_Management_Software.Controllers
             repository.DeleteEmloyee(id);
             return NoContent();
         }
+
+        [HttpPut("{id}")]
+        public ActionResult<UpdateEmployeeDto> UpdateEmployee(Guid id, UpdateEmployeeDto employeeDto)
+        {
+            var existingEmployee = repository.GetEmployee(id);
+
+            if(existingEmployee is null)
+                return NotFound();
+
+            var updatedEmployee = existingEmployee with {
+                Name = employeeDto.Name,
+                Position = employeeDto.Position, 
+                Birthday = employeeDto.Birthday
+            };
+
+            repository.UpdateEmployee(updatedEmployee);
+            
+            return NoContent();
+        }
     }
 }
